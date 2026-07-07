@@ -4,6 +4,7 @@
 //
 
 import Combine
+import Dispatch
 
 /// Top-level model for the app's settings.
 @MainActor
@@ -33,17 +34,23 @@ final class AppSettings: ObservableObject {
 
         advanced.objectWillChange
             .sink { [weak self] in
-                self?.objectWillChange.send()
+                DispatchQueue.main.async {
+                    self?.objectWillChange.send()
+                }
             }
             .store(in: &c)
         general.objectWillChange
             .sink { [weak self] in
-                self?.objectWillChange.send()
+                DispatchQueue.main.async {
+                    self?.objectWillChange.send()
+                }
             }
             .store(in: &c)
         hotkeys.objectWillChange
             .sink { [weak self] in
-                self?.objectWillChange.send()
+                DispatchQueue.main.async {
+                    self?.objectWillChange.send()
+                }
             }
             .store(in: &c)
 

@@ -17,6 +17,20 @@ Ice is a powerful menu bar management tool. While its primary function is hiding
 > [!NOTE]
 > Ice is currently in active development. Some features have not yet been implemented. Download the latest release [here](https://github.com/jordanbaird/Ice/releases/latest) and see the roadmap below for upcoming features.
 
+## Fork Notes
+
+This repository is a personal fork of [jordanbaird/Ice](https://github.com/jordanbaird/Ice), based on the upstream `macos-26` branch.
+
+本 fork 基于上游 `macos-26` 分支，主要用于 macOS 26 下的本机自用构建和修复验证。
+
+本 fork 增加和调整：
+
+- 增加设置界面的简体中文支持，覆盖通用、菜单栏外观、快捷键、高级、关于以及相关公共控件。
+- 增加应用内语言选择，可在跟随系统、English、简体中文之间切换。
+- 补齐菜单栏外观控件、更新设置、Ice 图标名称、快捷键录制标签和 BETA 标记等文案翻译。
+- 缓解 SwiftUI 在 view update 过程中发布状态变更导致的运行时警告。
+- 保留面向 macOS 26 开发和本机自用打包的本地签名/构建配置。
+
 <a href="https://www.buymeacoffee.com/jordanbaird" target="_blank">
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
 </a>

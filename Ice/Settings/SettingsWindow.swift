@@ -14,7 +14,7 @@ struct SettingsWindow: Scene {
 
     var body: some Scene {
         IceWindow(id: .settings) {
-            SettingsView(navigationState: appState.navigationState)
+            SettingsView(settings: appState.settings, navigationState: appState.navigationState)
                 .onWindowChange { window in
                     model.observeWindowToolbar(window)
                 }

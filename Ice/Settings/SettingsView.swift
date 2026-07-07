@@ -7,6 +7,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var appState: AppState
+    @ObservedObject var settings: AppSettings
     @ObservedObject var navigationState: AppNavigationState
     @Environment(\.appearsActive) private var appearsActive
     @Environment(\.sidebarRowSize) private var sidebarRowSize
@@ -64,6 +65,7 @@ struct SettingsView: View {
             detailView
         }
         .navigationTitle(navigationTitle)
+        .environment(\.locale, settings.general.appLanguage.locale)
     }
 
     @ViewBuilder

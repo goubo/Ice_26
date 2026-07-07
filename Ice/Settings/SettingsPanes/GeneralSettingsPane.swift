@@ -60,7 +60,13 @@ struct GeneralSettingsPane: View {
 
     @ViewBuilder
     private var appOptions: some View {
-        LaunchAtLogin.Toggle()
+        LaunchAtLogin.Toggle("Launch at login")
+        IcePicker("Language", selection: $settings.appLanguage) {
+            ForEach(AppLanguage.allCases) { language in
+                Text(language.localized).tag(language)
+            }
+        }
+        .annotation("Choose the language used in Ice's settings interface.")
     }
 
     // MARK: Ice Icon Options
@@ -155,7 +161,7 @@ struct GeneralSettingsPane: View {
     @ViewBuilder
     private func iceIconMenuItem(for imageSet: ControlItemImageSet) -> some View {
         Label {
-            Text(imageSet.name.rawValue)
+            Text(LocalizedStringKey(imageSet.name.rawValue))
         } icon: {
             if let nsImage = imageSet.hidden.nsImage(for: appState) {
                 switch imageSet.name {

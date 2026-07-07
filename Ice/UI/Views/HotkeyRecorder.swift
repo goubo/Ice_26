@@ -112,7 +112,7 @@ struct HotkeyRecorder<Label: View>: View {
             .resizable()
             .aspectRatio(1, contentMode: .fit)
             .padding(padding)
-            .accessibilityLabel(label)
+            .accessibilityLabel(Text(LocalizedStringKey(label)))
     }
 }
 

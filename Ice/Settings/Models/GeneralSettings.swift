@@ -63,6 +63,9 @@ final class GeneralSettings: ObservableObject {
     /// is ``RehideStrategy/timed``.
     @Published var rehideInterval: TimeInterval = 15
 
+    /// The language used by Ice's interface.
+    @Published var appLanguage: AppLanguage = .system
+
     /// Encoder for properties.
     private let encoder = JSONEncoder()
 
@@ -102,6 +105,11 @@ final class GeneralSettings: ObservableObject {
         Defaults.ifPresent(key: .rehideStrategy) { rawValue in
             if let strategy = RehideStrategy(rawValue: rawValue) {
                 rehideStrategy = strategy
+            }
+        }
+        Defaults.ifPresent(key: .appLanguage) { rawValue in
+            if let language = AppLanguage(rawValue: rawValue) {
+                appLanguage = language
             }
         }
 
@@ -217,7 +225,46 @@ final class GeneralSettings: ObservableObject {
             }
             .store(in: &c)
 
+        $appLanguage
+            .receive(on: DispatchQueue.main)
+            .sink { language in
+                Defaults.set(language.rawValue, forKey: .appLanguage)
+            }
+            .store(in: &c)
+
         cancellables = c
+    }
+}
+
+// MARK: - AppLanguage
+
+/// A language that can be used for Ice's interface.
+enum AppLanguage: String, CaseIterable, Identifiable {
+    /// Follow the user's system language.
+    case system = "system"
+    /// Use English.
+    case english = "en"
+    /// Use Simplified Chinese.
+    case simplifiedChinese = "zh-Hans"
+
+    var id: String { rawValue }
+
+    /// The locale to apply to SwiftUI views.
+    var locale: Locale {
+        switch self {
+        case .system: .autoupdatingCurrent
+        case .english: Locale(identifier: "en")
+        case .simplifiedChinese: Locale(identifier: "zh-Hans")
+        }
+    }
+
+    /// Localized string key representation.
+    var localized: LocalizedStringKey {
+        switch self {
+        case .system: "System"
+        case .english: "English"
+        case .simplifiedChinese: "Simplified Chinese"
+        }
     }
 }
 

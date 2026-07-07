@@ -32,7 +32,11 @@ extension View {
                         key: FramePreferenceKey.self,
                         value: geometry.frame(in: coordinateSpace)
                     )
-                    .onPreferenceChange(FramePreferenceKey.self, perform: action)
+                    .onPreferenceChange(FramePreferenceKey.self) { frame in
+                        DispatchQueue.main.async {
+                            action(frame)
+                        }
+                    }
             }
         }
     }
@@ -48,6 +52,9 @@ extension View {
         update binding: Binding<CGRect>
     ) -> some View {
         onFrameChange(in: coordinateSpace) { frame in
+            guard binding.wrappedValue != frame else {
+                return
+            }
             binding.wrappedValue = frame
         }
     }

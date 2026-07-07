@@ -174,22 +174,30 @@ final class AppState: ObservableObject {
 
         menuBarManager.objectWillChange
             .sink { [weak self] in
-                self?.objectWillChange.send()
+                DispatchQueue.main.async {
+                    self?.objectWillChange.send()
+                }
             }
             .store(in: &c)
         permissions.objectWillChange
             .sink { [weak self] in
-                self?.objectWillChange.send()
+                DispatchQueue.main.async {
+                    self?.objectWillChange.send()
+                }
             }
             .store(in: &c)
         settings.objectWillChange
             .sink { [weak self] in
-                self?.objectWillChange.send()
+                DispatchQueue.main.async {
+                    self?.objectWillChange.send()
+                }
             }
             .store(in: &c)
         updatesManager.objectWillChange
             .sink { [weak self] in
-                self?.objectWillChange.send()
+                DispatchQueue.main.async {
+                    self?.objectWillChange.send()
+                }
             }
             .store(in: &c)
 

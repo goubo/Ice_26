@@ -29,14 +29,6 @@ struct AboutSettingsPane: View {
         URL(string: "https://icemenubar.app/Donate")!
     }
 
-    private var lastUpdateCheckString: String {
-        if let date = updatesManager.lastUpdateCheckDate {
-            date.formatted(date: .abbreviated, time: .standard)
-        } else {
-            "Never"
-        }
-    }
-
     var body: some View {
         if #available(macOS 26.0, *) {
             contentForm(cornerStyle: .continuous)
@@ -137,8 +129,17 @@ struct AboutSettingsPane: View {
                 updatesManager.checkForUpdates()
             }
             Spacer()
-            Text("Last checked: \(lastUpdateCheckString)")
+            lastUpdateCheckText
                 .font(.caption)
+        }
+    }
+
+    @ViewBuilder
+    private var lastUpdateCheckText: some View {
+        if let date = updatesManager.lastUpdateCheckDate {
+            Text("Last checked: \(date.formatted(date: .abbreviated, time: .standard))")
+        } else {
+            Text("Last checked: Never")
         }
     }
 

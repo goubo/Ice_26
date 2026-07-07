@@ -1,0 +1,165 @@
+/* Settings navigation */
+"General" = "通用";
+"Menu Bar Layout" = "菜单栏布局";
+"Menu Bar Appearance" = "菜单栏外观";
+"Hotkeys" = "快捷键";
+"Advanced" = "高级";
+"About" = "关于";
+
+/* General settings */
+"Launch at login" = "登录时启动";
+"Language" = "语言";
+"System" = "跟随系统";
+"English" = "英语";
+"Simplified Chinese" = "简体中文";
+"Choose the language used in Ice's settings interface." = "选择 Ice 设置界面使用的语言。";
+"Show Ice icon" = "显示 Ice 图标";
+"Click to show hidden menu bar items. Right-click to access Ice's settings." = "点击显示隐藏的菜单栏项目。右键点击可打开 Ice 设置。";
+"Ice icon" = "Ice 图标";
+"Choose image…" = "选择图片…";
+"Choose a custom icon to show in the menu bar." = "选择一个显示在菜单栏中的自定义图标。";
+"OK" = "好";
+"Custom icon uses dynamic appearance" = "自定义图标使用动态外观";
+"Display the icon as a monochrome image that dynamically adjusts to match the menu bar's appearance. This setting removes all color from the icon, but ensures consistent rendering with both light and dark backgrounds." = "将图标显示为单色图片，并根据菜单栏外观动态调整。此设置会移除图标中的所有颜色，但可以确保在浅色和深色背景下都保持一致的渲染效果。";
+"Use Ice Bar" = "使用 Ice Bar";
+"Show hidden menu bar items in a separate bar below the menu bar." = "在菜单栏下方的独立栏中显示隐藏的菜单栏项目。";
+"Location" = "位置";
+"Dynamic" = "动态";
+"Mouse pointer" = "鼠标指针";
+"The Ice Bar's location changes based on context." = "Ice Bar 的位置会根据上下文变化。";
+"The Ice Bar is centered below the mouse pointer." = "Ice Bar 会居中显示在鼠标指针下方。";
+"The Ice Bar is centered below the Ice icon." = "Ice Bar 会居中显示在 Ice 图标下方。";
+"Show on click" = "点击时显示";
+"Click inside an empty area of the menu bar to show hidden menu bar items." = "点击菜单栏空白区域以显示隐藏的菜单栏项目。";
+"Show on hover" = "悬停时显示";
+"Hover over an empty area of the menu bar to show hidden menu bar items." = "将鼠标悬停在菜单栏空白区域以显示隐藏的菜单栏项目。";
+"Show on scroll" = "滚动时显示";
+"Scroll or swipe in the menu bar to show hidden menu bar items." = "在菜单栏中滚动或轻扫以显示隐藏的菜单栏项目。";
+"Automatically rehide" = "自动重新隐藏";
+"Strategy" = "策略";
+"Smart" = "智能";
+"Timed" = "定时";
+"Focused app" = "前台 App";
+"Menu bar items are rehidden using a smart algorithm." = "使用智能算法重新隐藏菜单栏项目。";
+"Menu bar items are rehidden after a fixed amount of time." = "在固定时间后重新隐藏菜单栏项目。";
+"Menu bar items are rehidden when the focused app changes." = "当前台 App 变化时重新隐藏菜单栏项目。";
+"Menu bar item spacing" = "菜单栏项目间距";
+"Apply" = "应用";
+"Apply the current spacing" = "应用当前间距";
+"Reset to the default spacing" = "重置为默认间距";
+"Applying this setting will relaunch all apps with menu bar items. Some apps may need to be manually relaunched." = "应用此设置会重新启动所有包含菜单栏项目的 App。部分 App 可能需要手动重新启动。";
+"Note: You may need to log out and back in for this setting to apply properly." = "注意：你可能需要退出登录后重新登录，此设置才能正确生效。";
+"none" = "无";
+"default" = "默认";
+"max" = "最大";
+"1 second" = "1 秒";
+"%@ second" = "%@ 秒";
+"%@ seconds" = "%@ 秒";
+
+/* Advanced settings */
+"Menu Bar Sections" = "菜单栏分区";
+"Other" = "其他";
+"Permissions" = "权限";
+"Enable the always-hidden section" = "启用始终隐藏分区";
+"Show all sections when ⌘ Command + dragging menu bar items" = "按住 ⌘ Command 拖拠菜单栏项目时显示所有分区";
+"Section divider style" = "分区分隔符样式";
+"None" = "无";
+"Chevron" = "箭头";
+"Hide app menus when showing menu bar items" = "显示菜单栏项目时隐藏 App 菜单";
+"Make more room in the menu bar by hiding the current app menus if needed. macOS requires Ice to make itself visible in the Dock while this setting is in effect." = "必要时隐藏当前 App 菜单，为菜单栏腾出更多空间。启用此设置期间，macOS 要求 Ice 在 Dock 中显示。";
+"Enable secondary context menu" = "启用辅助上下文菜单";
+"Right-click in an empty area of the menu bar to display a minimal version of Ice's menu. Disable this setting if you encounter conflicts with other apps." = "右键点击菜单栏空白区域可显示简化版 Ice 菜单。如果与其他 App 冲突，请关闭此设置。";
+"Show on hover delay" = "悬停显示延迟";
+"The amount of time to wait before showing on hover." = "悬停后等待多久再显示。";
+"Temporarily shown item delay" = "临时显示项目延迟";
+"The amount of time to wait before hiding temporarily shown menu bar items." = "隐藏临时显示的菜单栏项目之前等待的时间。";
+"Permission Granted" = "权限已授予";
+"Grant Permission" = "授予权限";
+
+/* Hotkeys settings */
+"Menu Bar Items" = "菜单栏项目";
+"Toggle the hidden section" = "切换隐藏分区";
+"Toggle the always-hidden section" = "切换始终隐藏分区";
+"Search menu bar items" = "搜索菜单栏项目";
+"Enable the Ice Bar" = "启用 Ice Bar";
+"Toggle application menus" = "切换 App 菜单";
+
+/* Menu bar layout */
+"Drag to arrange your menu bar items into different sections." = "拖拽以将菜单栏项目排列到不同分区。";
+"Items can also be arranged by ⌘ Command + dragging them in the menu bar." = "也可以在菜单栏中按住 ⌘ Command 并拖拽项目来排列。";
+"Ice cannot arrange menu bar items in automatically hidden menu bars." = "Ice 无法在自动隐藏的菜单栏中排列菜单栏项目。";
+"Menu bar layout requires screen recording permissions." = "菜单栏布局需要屏幕录制权限。";
+"Go to Advanced Settings" = "前往高级设置";
+"Loading menu bar items…" = "正在加载菜单栏项目…";
+"Visible" = "可见";
+"Hidden" = "隐藏";
+"Always-Hidden" = "始终隐藏";
+
+/* Menu bar appearance */
+"Ice cannot edit the appearance of automatically hidden menu bars." = "Ice 无法编辑自动隐藏菜单栏的外观。";
+"This action cannot be undone." = "此操作无法撤销。";
+"Solid" = "纯色";
+"Gradient" = "渐变";
+"Full" = "完整";
+"Split" = "分割";
+"No shape kind selected" = "未选择形状类型";
+
+/* About settings */
+"Check for Updates" = "检查更新";
+"Quit Ice" = "退出 Ice";
+"Acknowledgements" = "致谢";
+"Contribute" = "贡献";
+"Report a Bug" = "报告 Bug";
+"Support Ice" = "支持 Ice";
+"Last checked: %@" = "上次检查：%@";
+"Version %@" = "版本 %@";
+
+/* General settings - icon names */
+"Arrow" = "箭头";
+"Door" = "门";
+"Dot" = "圆点";
+"Ellipsis" = "省略号";
+"Ice Cube" = "冰块";
+"Sunglasses" = "太阳镜";
+"Custom" = "自定义";
+
+/* Menu bar appearance editor */
+"Tip: You can also edit these settings by right-clicking in an empty area of the menu bar." = "提示：你也可以右键点击菜单栏空白区域来编辑这些设置。";
+"Menu Bar Shape" = "菜单栏形状";
+"Done" = "完成";
+"Reset" = "重置";
+"Reset Menu Bar Appearance" = "重置菜单栏外观";
+"Cancel" = "取消";
+"Use dynamic appearance" = "使用动态外观";
+"Apply different settings based on the current system appearance." = "根据当前系统外观应用不同设置。";
+"Use inset shape on screens with notch" = "在带刘海的屏幕上使用内嵌形状";
+"Tint" = "着色";
+"Shadow" = "阴影";
+"Border" = "边框";
+"Border Color" = "边框颜色";
+"Border Width" = "边框宽度";
+"Light Appearance" = "浅色外观";
+"Dark Appearance" = "深色外观";
+"Hold to Preview" = "按住预览";
+"Shape Kind" = "形状类型";
+"Leading End Cap" = "左侧端帽";
+"Trailing End Cap" = "右侧端帽";
+"Square Cap" = "方形端帽";
+"Round Cap" = "圆形端帽";
+
+/* About settings */
+"Never" = "从未";
+"Last checked: Never" = "上次检查：从未";
+"Automatically check for updates" = "自动检查更新";
+"Automatically download updates" = "自动下载更新";
+
+/* Hotkey recorder */
+"Hotkey is reserved by macOS" = "该快捷键已被 macOS 保留";
+"Type Hotkey" = "输入快捷键";
+"ERROR" = "错误";
+"Record Hotkey" = "录制快捷键";
+"Clear" = "清除";
+"Record" = "录制";
+
+/* Misc */
+"BETA" = "测试版";

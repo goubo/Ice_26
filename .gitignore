@@ -1,3 +1,8 @@
 .DS_Store
 build/
 xcuserdata/
+
+# 本地协作文档
+CLAUDE.md
+docs/
+.gitignore

@@ -150,6 +150,7 @@ extension Defaults {
         case rehideStrategy = "RehideStrategy"
         case rehideInterval = "RehideInterval"
         case itemSpacingOffset = "ItemSpacingOffset"
+        case appLanguage = "AppLanguage"
 
         // MARK: Hotkeys Settings
         case hotkeys = "Hotkeys"
